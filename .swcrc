@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "test": ".*\\.[tj]s$",
+  "exclude": ["node_modules"],
+  "sourceMaps": true,
+  "module": {
+    "type": "es6",
+    "resolveFully": true
+  },
+  "jsc": {
+    "baseUrl": "./",
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true
+    },
+    "experimental": {
+      "keepImportAssertions": true
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true,
+      "useDefineForClassFields": false
+    },
+    "target": "esnext",
+    "keepClassNames": true,
+    "preserveAllComments": true,
+    "externalHelpers": true
+  }
+}
