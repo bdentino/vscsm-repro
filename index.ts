@@ -1,4 +1,4 @@
-import * as http from 'http';
+import * as http from 'node:http';
 
 export type DummyTypeThatWillGetCompiledAway = {
   a: string;
@@ -19,6 +19,7 @@ export type DummyTypeThatWillGetCompiledAway = {
 }
 
 const server = http.createServer((req, res) => {
+  debugger;
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('OK');
